@@ -1,12 +1,19 @@
 body{
-    box-shadow: 10px 10px 4px 4px ;
+    /* box-shadow: 10px 10px 4px 4px ; */
     margin: 3em 2em 3em 2em;
     padding: 1em 1em 1em 1em;
     border-radius: 19px 19px 19px 19px;  
     font-family : Brush Script MT, Brush Script Std, cursive;
     align-self: center;
     justify-self: center;
-    background-color: whitesmoke;
+  
+   }
+
+   html{
+    background-image:url(first-west-england-bus-social-distancing-900w.jpg  );
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 h1 {
@@ -15,6 +22,7 @@ h1 {
     font-size: large;
     line-height: 1;
     font-weight: bold;
+    color:crimson;
 
   }
   
@@ -24,6 +32,7 @@ h1 {
     grid-column: span 3;
     font-weight: bold;
     font-size: 15px;
+    color: white;
 
   }
   
@@ -38,7 +47,6 @@ h1 {
   input[type="button"] {
     width: 100%;
     height: clamp(calc(0.03 * 320px), 3vw, calc(0.03 * 425px));
-    /* background-color:lightblue; */
     border: black solid 1pt;
     border-radius: 10px;
   }
