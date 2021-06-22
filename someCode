@@ -1,0 +1,22 @@
+var embarkbtn =  document.querySelector(".embark")
+var disembark =  document.querySelector(".disembark")
+var NextDestination = document.querySelector(".Next Destination")
+var bsActualCap = document.querySelector(".bsActualCap")
+
+
+var bus = {
+    actualCap:0
+    
+}
+
+
+embarkbtn.addEventListener("click",function(){
+  bsActualCap.innerHTML = bus.actualCap++
+  
+})
+disembark.addEventListener("click",function(){
+  bsActualCap.innerHTML = bus.actualCap--
+})
+NextDestination.addEventListener("click",function(){
+  
+})
