@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="favicon.jpg/12.jpg">
     <title>SafeWay Bus App</title>
-    <script src="./graphs/graphs.js"></script>
+    
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link rel="stylesheet" href="./graphs/graphs.css">
 
@@ -20,19 +20,25 @@
 <body>
     <div class="container">
 
+      
+
         <input type="text" class="ticket_input" placeholder="eg.Cpt - Bellville" />
         <span class="confirmation">Please enter ticket number below:</span>
         <input class="add_btn" type="button" value="Add" />
         <input class="Disembarking_btn" type="button" value="Disembark" />
-        <input class="Boarding_btn" type="button" value="Board" />
+        <input type="button" class="Boarding_btn"  value="Board"/>
 
         <div class="filter">
             <!-- Select a route: -->
             <select class="town">
-              <option value="">Select a route</option>
-              <option value="yz1">CAPE TOWN - BELLVILLE</option>
-              <option value="xyz1">CAPE TOWN - LANGA</option>
-              <option value="xyz12">CAPE TOWN - GUGULETHU</option>
+              <option value="Cape Town">Cape Town</option>
+              <option value="Wood stock">Wood stock</option>
+              <option value="Salt river">Salt river</option>
+              <option value="Koeberg">Koeberg</option>
+              <option value="Maitland">Maitland</option>
+              <option value="Pinelands">Pinelands</option>
+              <option value="Ndabeni">Ndabeni</option>
+              <option value="Langa">Ndabeni</option>
             </select>
         </div>
         <ul class="reg_display_list"></ul>
@@ -44,11 +50,10 @@
     </div>
 
 </body>
-<script>
-    var myChart = new Chart(
-        document.getElementById('myChart'),
-        config
-    );
-</script>
+
+
+<script src="./js/javascript.js"></script>
+<script src="./graphs/graphs.js"></script>
+
 
 </html>
