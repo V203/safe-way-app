@@ -14,12 +14,21 @@
 <body>
         <div class="container">
           <h1>𝐒𝐚𝐟𝐞𝐖𝐚𝐲 𝐁𝐮𝐬 𝐀𝐩𝐩</h1>
-          <input type="text" class="ticket_input" placeholder="eg.Cpt - Bellville" />
-          <span class="confirmation">Please enter your unique ticket bus number in the text-box below.</span>
-          <input class="add_btn" type="button" value="Add" />
-          <input class="Disembarking_btn" type="button" value="Disembarking" />
-          <input class="Boarding_btn" type="button" value="Boarding" />
+
+          <!-- <input type="text" class="ticket_input" placeholder="eg.Cpt - Bellville" /> -->
+          <!-- <span class="confirmation">Please enter your unique ticket bus number in the text-box below.</span> -->
+          <!-- <input class="add_btn" type="button" value="Add" /> -->
+          <!-- <input class="Disembarking_btn" type="button" value="Disembarking" /> -->
+          <!-- <input class="Boarding_btn" type="button" value="Boarding" /> -->
+          <!-- <input class="NextD_btn" type="button" value="Next Destination" /> -->
+
+          <button class="geton">Boarding</button>
+          <button class="nextd_btn">Next Destination</button>
+          <button class="getoff">Disembarking</button>
+          <button class="add_btn">Add</button>
+
           <div class="filter">
+
             Filter by town:
             <select class="town">
               <option value="">Select a route</option>
@@ -35,7 +44,7 @@
         <div class="canvas-container">
           <canvas id="myChart" width="350" height="350"></canvas>
       </div>
-        
+      <script src="./js/javascript.js"></script> 
 </body>
 <script>
   var myChart = new Chart(
@@ -43,4 +52,5 @@
     config
   );
 </script>
+
 </html>
