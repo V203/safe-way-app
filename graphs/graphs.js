@@ -2,10 +2,10 @@ var embarkBtn = document.querySelector(".Boarding_btn")
 var disEmbark = document.querySelector(".Disembarking_btn")
 var townDrop = document.querySelector(".town")
 var  bus = {        
-  'Cape Town':5,
-  'wood stock':10,
-  'Salt river':3,
-  'Koeberg':2,
+  'Cape Town':0,
+  'wood stock':0,
+  'Salt river':0,
+  'Koeberg':0,
   'Maitland':7,
   'Pinelands':9,
   'Ndabeni':3,
@@ -35,7 +35,7 @@ var myChart = new Chart(
 
 
 
-embarkBtn.addEventListener("click",function(){
+disEmbark.addEventListener("click",function(){
   
   if(townDrop.value === "Cape Town" ){
     bus["Cape Town"]= -1
@@ -58,7 +58,7 @@ embarkBtn.addEventListener("click",function(){
 
     
 });
-disEmbark.addEventListener("click",function(){
+embarkBtn.addEventListener("click",function(){
   myChart.update()
   if(townDrop.value === "Cape Town" ){
     bus["Cape Town"]++
