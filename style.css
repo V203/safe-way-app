@@ -63,10 +63,6 @@ input[type="text"] {
     grid-row: 3 / span 1;
 }
 
-.add_btn {
-    grid-column: 3 / span 1;
-    grid-row: 3 / span 1;
-}
 
 .filter {
     grid-column: 1 / span 2;
@@ -79,10 +75,20 @@ input[type="text"] {
     margin-top: 30px;
 }
 
+.Boarding_btn:hover{
+    color: green;
+    
+}
+
 .Disembarking_btn {
     grid-column: 3 / span 1;
     grid-row: 5 / span 1;
     margin-top: 30px;
+}
+
+.Disembarking_btn:hover{
+    color: green;
+    
 }
 
 ul {
@@ -134,10 +140,7 @@ ul {
         font-weight: 500px;
         align-items: left;
     }
-    .add_btn {
-        grid-column: 1 / span 1;
-        grid-row: 4 / span 1;
-    }
+    
     .Disembarking_btn {
         grid-column: 1 / span 1;
         grid-row: 7 / span 1;
