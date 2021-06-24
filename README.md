@@ -1,2 +1,4 @@
 # SafeWay Bus-App
-This app managers the capacity of commuters,following covid 19 regulations specifically social distancing and ensuring the lives of the commuters .
+While more people opt for travel by car and private transport, the number of passengers that  buses can carry has also been reduced to meet social distancing guidelines. This means that people from different households must keep one to two metres apart. So, once a seat is taken, surrounding seats must be left empty.
+
+We designed an app that optimises the number, and seating arrangement, of people who can safely use buses. The app allows a bus company to see the available seat or restrict the number of people that can board a bus and allow bus drivers to complain when passengers do not comply with this regulation.

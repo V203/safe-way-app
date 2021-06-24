@@ -2,7 +2,7 @@ var embarkBtn = document.querySelector(".Boarding_btn")
 var disEmbark = document.querySelector(".Disembarking_btn")
 var townDrop = document.querySelector(".town")
 var bus = {
-  'Cape Town': 4,
+  'Cape Town': 0,
   'Wood stock': 0,
   'Salt river': 0,
   'Koeberg': 0,
@@ -11,7 +11,6 @@ var bus = {
   'Ndabeni': 0,
   "Langa": 0
 }
-
 var data = {
   labels: Object.keys(bus),
   datasets: [{
@@ -20,43 +19,27 @@ var data = {
     borderColor: 'rgb(255, 99, 244)',
     data_:data_  = Object.values(bus).reduce((elem , elemb)=> elem + elemb,0),
     data: bus_ = Object.values(bus).map(function (elem) { return elem }),
-    
   }]
 };
 console.log(data_)
-
 var config = {
   type: 'line',
   data: data,
   options: {
-    title: {
-      display: true,
-      text: 'Kindmate - Chart Static Donate'
-    },
     scales: {
-      y:{ 
+      y:{
         beginAtZero: true,
         display:true,
-        text:"Number Of Passengers",
-        ticks: {
-          min: 2,
-          max: 5,
-          stepSize: 1
-          
-      }
-        
+        text:["Number Of Passengers"]
       }
     }
   }
 };
-
 var myChart = new Chart(
   document.getElementById('myChart'),
   config
 );
-
 disEmbark.addEventListener("click", () => {
-  
   if (townDrop.value === "Cape Town") {
     bus["Cape Town"]--
   } else if (townDrop.value === "Wood stock") {
@@ -83,27 +66,19 @@ disEmbark.addEventListener("click", () => {
       data: bus_ = Object.values(bus).map(function (elem) { return elem }),
     }]
   };
-
   config = {
     type: 'line',
     data: data,
-    
+    data_:data_,
     options: {}
   };
-
   myChart.destroy();
-  
   myChart = new Chart(
     document.getElementById('myChart'),
     config
-    );  
+    );
 });
-
-
-
-
 embarkBtn.addEventListener("click", () => {
-alert(data_)
   if (townDrop.value === "Cape Town") {
     bus["Cape Town"]++
   } else if (townDrop.value === "Wood stock") {
@@ -118,10 +93,9 @@ alert(data_)
     bus["Pinelands"]++
   } else if (townDrop.value === "Ndabeni") {
     bus["Ndabeni"]++
-  } else if (townDrop.value === "Langa") {
+  } else if (townDrop.value === "Lanaga") {
     bus["Langa"]++
   }
-
   data = {
     labels: Object.keys(bus),
     datasets: [{
@@ -131,24 +105,17 @@ alert(data_)
       data: bus_ = Object.values(bus).map(function (elem) { return elem }),
     }]
   };
-
   config = {
     type: 'line',
     data: data,
-    options: {
-     
-    }
+    options: {}
   };
-
   myChart.destroy();
-  
   myChart = new Chart(
     document.getElementById('myChart'),
     config
-    );    
-  
+    );
   })
-
 function addData(chart, labels, data) {
   chart.data.labels.push(labels);
   chart.data.datasets.forEach((dataset) => {
