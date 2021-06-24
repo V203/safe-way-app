@@ -20,17 +20,22 @@
 <body>
     <div class="container">
 
-
-
-
         <span class="confirmation">Please enter ticket number below:</span>
 
         <input class="Disembarking_btn" type="button" value="Disembark" />
         <input type="button" class="Boarding_btn" value="Board" />
 
+
+        <span class="confirmation">Please select your location below:</span>
+        <input class="Disembarking_btn" type="button" value="Disembark" />
+        <input type="button" class="Boarding_btn" value="Board" />
+        <button class="btn" value="Complaint Form"><a href="safeWay.html">Complaint Form</a></button>
+
+
         <div class="filter">
-            <!-- Select a route: -->
+            Filter by town:
             <select class="town">
+                <option value="">Current Bus Location</option>
               <option value="Cape Town">Cape Town</option>
               <option value="Wood stock">Wood stock</option>
               <option value="Salt river">Salt river</option>
@@ -48,6 +53,7 @@
     <div class="canvas-container">
         <canvas id="myChart" width="350" height="350"></canvas>
     </div>
+
 
 </body>
 
