@@ -1,97 +1,85 @@
-var disembarking_btn = document.querySelector(".getoff");
-var boarding_btn = document.querySelector(".geton")
-var add_btn = document.querySelector(".add_btn")
-var nextD_btn = document.querySelector(".nextd_btn")
-
-
-// const  bus = {
-
-
-//     // 'Cape Town':8,
-//     // 'wood stock':2,
-//     // 'Salt river':0,
-//     // 'Koeberg':0,
-//     // 'Maitland':0,
-//     // 'Pinelands':1,
-//     // 'Ndabeni':0,
-//     // "Langa":0
-// }
-
-var bus = [
-  { name: "Cape Town", passengers: 1 },
-  { name: "wood stock", passengers: 2 },
-  { name: "Saltriver", passengers: 3 },
-];
-var townName = []
-var temp = []
-
-var tempUpdated = [];
-
-for (let i = 0; i < bus.length; i++) {
-
-  temp.push(bus[i].passengers)
-  townName.push(bus[i].name)
-  // console.log(bus[key]);
-
+var embarkBtn = document.querySelector(".Boarding_btn")
+var disEmbark = document.querySelector(".Disembarking_btn")
+var townDrop = document.querySelector(".town")
+var  bus = {        
+  'Cape Town':5,
+  'wood stock':10,
+  'Salt river':3,
+  'Koeberg':2,
+  'Maitland':7,
+  'Pinelands':9,
+  'Ndabeni':3,
+  "Langa":9
 }
 
-
-// disembarking_btn.addEventListener("click",function(){
-
-//    temp = Object.keys(bus)
-
-
-
-// })
-
-boarding_btn.addEventListener("click", function (e) {
-
-e.preventDefault()
-  var objIndex = bus.findIndex(function (elem) {
-    return elem.name == "Saltriver";
-
-  });
-  console.log(objIndex)
-
-  bus[objIndex].passengers = bus[objIndex].passengers += 1
-  // console.log(bus[objIndex])
-  // console.log(bus)
-
-  temp = []
-  // for (let i = 0; i < bus.length; i++) {
-
-  //   tempUpdated.push(bus[i].passengers)
-  //   console.log(bus[i].passengers);
-  // }
-
-  //alert("hghg")
-})
-
-// add_btn.addEventListener("click",function(){
-//  bus['wood stock']+=1
-
-// })
-
-
-// nextD_btn.addEventListener("click",function(){
-//     alert()
-
-// })
-
 var data = {
-  labels: townName,
+  labels: Object.keys(bus) ,
   datasets: [{
     label: 'Bus No GA-4526',
     backgroundColor: 'rgb(255, 99, 132)',
     borderColor: 'rgb(255, 99, 244)',
-    data: temp,
+    data: bus_ = Object.values(bus).map(function(elem){ return elem }) ,
   }]
 };
 
-
-var config = {
-  type: 'bar',
-  data
+const config = {
+  type: 'line',
+  data,
+  options: {}
 };
+
+var myChart = new Chart(
+  document.getElementById('myChart'),
+  config
+);
+
+
+
+embarkBtn.addEventListener("click",function(){
+  
+  if(townDrop.value === "Cape Town" ){
+    bus["Cape Town"]= -1
+  }else if(townDrop.value === "Wood stock"){
+    bus["Wood stock"]= -1
+  }else if(townDrop.value === 'Salt river'){
+    bus["Salt river"]= -1
+  }else if(townDrop.value === "Koeberg"){
+    bus["Koeberg"]= -1
+  }else if(townDrop.value === "Maitland"){
+    bus["Maitland"]= -1
+  }else if(townDrop.value === "Pinelands"){
+    bus["Pinelands"]= -1
+  }else if(townDrop.value === "Ndabeni"){
+  bus["Ndabeni"]= -1    
+  }else if(townDrop.value === "Lanaga"){
+    bus["Langa"] = -1  
+    }
+    myChart.update()
+
+    
+});
+disEmbark.addEventListener("click",function(){
+  myChart.update()
+  if(townDrop.value === "Cape Town" ){
+    bus["Cape Town"]++
+  }else if(townDrop.value === "Wood stock"){
+    bus["Wood stock"]++
+  }else if(townDrop.value === 'Salt river'){
+    bus["Salt river"]++
+  }else if(townDrop.value === "Koeberg"){
+    bus["Koeberg"]++
+  }else if(townDrop.value === "Maitland"){
+    bus["Maitland"]++
+  }else if(townDrop.value === "Pinelands"){
+    bus["Pinelands"]++
+  }else if(townDrop.value === "Ndabeni"){
+  bus["Ndabeni"]++    
+  }else if(townDrop.value === "Lanaga"){
+    bus["Langa"]++    
+    }
+})
+
+
+
 
 
