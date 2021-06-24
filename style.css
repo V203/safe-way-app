@@ -4,19 +4,27 @@
     background-repeat: no-repeat;
     color: white;
     font-size: 30px;
+    border-radius: 19px 19px 19px 19px; 
 }
 
 body {
-    height: 100%;
+    box-shadow: 10px 10px 4px 4px lightslategray;
     margin: 3em 2em 3em 2em;
     padding: 1em 1em 1em 1em;
-    border-radius: 19px 19px 19px 19px;
-    font-family: Brush Script MT, Brush Script Std, cursive;
-    align-self: center;
-    justify-self: center;
+    border-radius: 19px 19px 19px 19px;  
+    font-family : Brush Script MT, Brush Script Std, cursive;
+
+}
+.master{
+    display: flex;
+    flex-flow: row;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 html {
+    /* background-image: url(output-onlinepngtools.png); */
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -63,10 +71,6 @@ input[type="text"] {
     grid-row: 3 / span 1;
 }
 
-.add_btn {
-    grid-column: 3 / span 1;
-    grid-row: 3 / span 1;
-}
 
 .filter {
     grid-column: 1 / span 2;
@@ -79,10 +83,44 @@ input[type="text"] {
     margin-top: 30px;
 }
 
+.Boarding_btn:hover{
+    color: green;
+    
+}
+
 .Disembarking_btn {
     grid-column: 3 / span 1;
     grid-row: 5 / span 1;
     margin-top: 30px;
+}
+
+.Disembarking_btn:hover{
+    color: green;
+    
+}
+
+.ewe{
+    margin-top: 5px;
+}
+
+
+#myChart{
+    
+ 
+    padding: 20px;
+    background: #ffffff;
+    border: thin inset #aaaaaa;
+    width: 300px;
+    height: 300px;
+    
+}
+
+.canvas-container{
+    width: 500px;
+    height: 300px;
+    
+    margin-left: 90px;
+    margin-right: 43px;
 }
 
 ul {
@@ -134,10 +172,7 @@ ul {
         font-weight: 500px;
         align-items: left;
     }
-    .add_btn {
-        grid-column: 1 / span 1;
-        grid-row: 4 / span 1;
-    }
+    
     .Disembarking_btn {
         grid-column: 1 / span 1;
         grid-row: 7 / span 1;

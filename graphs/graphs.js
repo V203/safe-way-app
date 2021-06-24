@@ -2,7 +2,7 @@ var embarkBtn = document.querySelector(".Boarding_btn")
 var disEmbark = document.querySelector(".Disembarking_btn")
 var townDrop = document.querySelector(".town")
 var bus = {
-  'Cape Town': 0,
+  'Cape Town': 4,
   'Wood stock': 0,
   'Salt river': 0,
   'Koeberg': 0,
@@ -29,11 +29,21 @@ var config = {
   type: 'line',
   data: data,
   options: {
+    title: {
+      display: true,
+      text: 'Kindmate - Chart Static Donate'
+    },
     scales: {
       y:{ 
         beginAtZero: true,
         display:true,
-        text:["Number Of Passengers"]
+        text:"Number Of Passengers",
+        ticks: {
+          min: 2,
+          max: 5,
+          stepSize: 1
+          
+      }
         
       }
     }
@@ -46,7 +56,7 @@ var myChart = new Chart(
 );
 
 disEmbark.addEventListener("click", () => {
-
+  
   if (townDrop.value === "Cape Town") {
     bus["Cape Town"]--
   } else if (townDrop.value === "Wood stock") {
@@ -77,7 +87,7 @@ disEmbark.addEventListener("click", () => {
   config = {
     type: 'line',
     data: data,
-    data_:data_,
+    
     options: {}
   };
 
@@ -93,7 +103,7 @@ disEmbark.addEventListener("click", () => {
 
 
 embarkBtn.addEventListener("click", () => {
-
+alert(data_)
   if (townDrop.value === "Cape Town") {
     bus["Cape Town"]++
   } else if (townDrop.value === "Wood stock") {
@@ -108,7 +118,7 @@ embarkBtn.addEventListener("click", () => {
     bus["Pinelands"]++
   } else if (townDrop.value === "Ndabeni") {
     bus["Ndabeni"]++
-  } else if (townDrop.value === "Lanaga") {
+  } else if (townDrop.value === "Langa") {
     bus["Langa"]++
   }
 
@@ -125,7 +135,9 @@ embarkBtn.addEventListener("click", () => {
   config = {
     type: 'line',
     data: data,
-    options: {}
+    options: {
+     
+    }
   };
 
   myChart.destroy();

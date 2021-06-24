@@ -18,37 +18,48 @@
 </div>
 
 <body>
+    <span class="confirmation">Please select your location below:</span> 
+<div class="master">
+         
+  
+    
     <div class="container">
-
-
-
-
-        <span class="confirmation">Please enter ticket number below:</span>
-
+               
+       
         <input class="Disembarking_btn" type="button" value="Disembark" />
-        <input type="button" class="Boarding_btn" value="Board" />
-
+        <input type="button" class="Boarding_btn"  value="Board"/>      
+       
+      
         <div class="filter">
-            <!-- Select a route: -->
+            Filter by town:
             <select class="town">
-                <option value="Cape Town">Cape Town</option>
-                <option value="Wood stock">Wood stock</option>
-                <option value="Salt river">Salt river</option>
-                <option value="Koeberg">Koeberg</option>
-                <option value="Maitland">Maitland</option>
-                <option value="Pinelands">Pinelands</option>
-                <option value="Ndabeni">Ndabeni</option>
-                <option value="Langa">Langa</option>
+                <option value="">Current Bus Location</option>
+              <option value="Cape Town">Cape Town</option>
+              <option value="Wood stock">Wood stock</option>
+              <option value="Salt river">Salt river</option>
+              <option value="Koeberg">Koeberg</option>
+              <option value="Maitland">Maitland</option>
+              <option value="Pinelands">Pinelands</option>
+              <option value="Ndabeni">Ndabeni</option>
+              <option value="Langa">Langa</option>
             </select>
+            
         </div>
-        <ul class="reg_display_list"></ul>
+        <div class="ewe"> <a href="safeWay.html">Complaint Form</a>
+        </div>
+       
+       
     </div>
-
-
     <div class="canvas-container">
-        <canvas id="myChart" width="350" height="350"></canvas>
+        <canvas id="myChart"></canvas>
     </div>
-
+   
+          
+    <div class="counter-div">
+        <h5>Number of passengers</h5>
+    </div>
+</div>
+  
 </body>
 
 
