@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="favicon.jpg/12.jpg">
+    <title>SafeWay Bus App</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<div class="header">
+</div>
+
+<body>
+    <span class="confirmation">Please select your location below:</span>
+    <div class="container">
+        <input class="Disembarking_btn" type="button" value="Disembark" />
+        <input type="button" class="Boarding_btn" value="Board" />
+        <input class="Disembarking_btn" type="button" value="Disembark" />
+        <input type="button" class="Boarding_btn" value="Board" />
+        <div class="filter">
+            Filter by town:
+            <select class="town">
+                <option value="">Current Bus Location</option>
+                <option value="Cape Town">Cape Town</option>
+                <option value="Wood stock">Wood stock</option>
+                <option value="Salt river">Salt river</option>
+                <option value="Koeberg">Koeberg</option>
+                <option value="Maitland">Maitland</option>
+                <option value="Pinelands">Pinelands</option>
+                <option value="Ndabeni">Ndabeni</option>
+                <option value="Langa">Langa</option>
+            </select>
+        </div>
+
+
+        <div class="ewe">
+            <a href="safeWay.html">Daily bus report</a>
+        </div>
+    </div>
+    <div class="canvas-container">
+        <canvas id="myChart"></canvas>
+    </div>
+</body>
+<script src="./js/javascript.js"></script>
+<script src="./graphs/graphs.js"></script>
+
+</html>
