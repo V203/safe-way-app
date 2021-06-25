@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,37 +7,27 @@
     <title>Document</title>
     <link rel="stylesheet" href="./complaint_form/complaint.html">
 </head>
-
 <div class="heading">
-    SafeWay Bus App Complaint Form 
+    SafeWay Bus App Daily Reports Form
 </div>
-
 <body>
-
-
     <form action="./complaint_form/complaint.html" method="get">
         <a href="./complaint_form/"></a>
-        <label for="busNo">Unique bus code: </label>
+        <label for="date">Date:</label>
+        <input type="date" id="dueDate" name="dueDate"><br><br>
+        <label for="busNo">Bus number: </label>
         <input type="text" id="busno" placeholder="Enter bus number here" name="busno" class="busno" value="">
         <label for="busno"></label><br><br>
-
         <input type="checkbox" id="complaint" name="complaint" value="social">
-        <label for="complaint">No social distance inside the bus</label><br><br>
-
+        <label for="complaint">Was there social distance inside the bus</label><br><br>
         <input type="checkbox" id="complaint" name="complaint" value="masks">
-        <label for="complaint">No masks worn inside the bus</label><br><br>
-
+        <label for="complaint">Were masks worn inside the bus</label><br><br>
         <input type="checkbox" id="complaint" name="complaint" value="sanitiser">
-        <label for="complaint">No sanitiser provided </label><br><br>
-
+        <label for="complaint">Sanitiser provided </label><br><br>
         <label for="fname">Other:</label><br>
         <input type="text" id="additional" placeholder="provide additional information " name="additional" class="additional" value=""><br><br>
-
         <input type="submit">
-
     </form>
-</body>
-
 </html>
 <style>
     body {
@@ -46,12 +35,10 @@
         font-style: inherit;
         margin: 5%;
     }
-    
     .busno {
         border: 5px thick;
         border-radius: 2px;
     }
-    
     .additional {
         box-sizing: content-box;
         width: 180px;
@@ -59,15 +46,10 @@
         padding: 20px;
         border-radius: 5px thick black;
     }
-    
     .heading {
         font-size: 29px;
         font-style: oblique;
         text-align: center;
         margin: 5px;
     }
-    /* button {
-        margin: 15px;
-        float: left;
-    } */
 </style>
